@@ -1,0 +1,12 @@
+плата WEMOS D1 R2 & MINI
+
+#define STASSID "evg"
+#define STAPSK  "fghmvyfr"
+MQ2PIN A0
+vpinBLYNK_RELAY V10
+pinHlevLightRelay 2  	//D4
+DHTPIN 0        	// D3
+char auth[] = "O0ozrH5md3FQbv2WlcbD9sI_3kMOq2jn"; // BLYNK Auth Token
+server_ip[] = "192.168.1.250";
+Serial.begin(9600);
+timer.setInterval(15000L, SendSensorsData);   //sending to Blynk every 15 sec ...
